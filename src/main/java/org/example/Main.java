@@ -44,8 +44,8 @@ public class Main {
                 StringBuilder text = new StringBuilder();
                 for (Object userTodos : todos) {
                     JSONObject userTodo = (JSONObject) userTodos;
-                    if (userTodo.getBoolean("completed")) {
-                        System.out.println("usertodos = " + userTodo);
+                    if (!userTodo.getBoolean("completed")) {
+                        System.out.println("userTodos = " + userTodo);
                         text.append("\n").append(userTodo.getString("title"));
                     }
                 }
